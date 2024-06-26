@@ -3,15 +3,16 @@ import React from 'react'
 import Footer from '/src/components/footer/Footer'
 =======
 import "./App.css";
-import Dashboard from './components/Dashboard/Dashboard'
+// import Dashboard from './components/Dashboard/Dashboard'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Sidebar from './components/Sidebar/Sidebar';
 import Navbar from './components/Navbar/Navbar';
+import Inventory from "./pages/Inventory/Inventory";
 
 function App() {
   const router = createBrowserRouter([
-    { path: "/", element: <Navbar /> },
-    { path: "/", element: <Sidebar /> },
+    { path: "/", element: <Inventory /> },
+    // { path: "/sidebar", element: <Sidebar /> },
     // { path: "/questionnaire", element: <QuestionnairePage /> },
     // { path: "/signup", element: <Signup /> },
     // { path: "/login", element: <Login /> },

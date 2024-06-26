@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../../assets/logo.svg';
+import Sidebar from '../Sidebar/Sidebar';
 
 const Navbar = ({ title, showSearchBar }) => {  
 
@@ -11,8 +12,7 @@ const Navbar = ({ title, showSearchBar }) => {
         </h2> */}
         <img src={Logo} alt="BawanAllah" />
       </div>
-      <div className='w-96'>
-
+      <div className='w-60'>
           <form class='flex items-center'>
             <label for='simple-search' class='sr-only'>
               Search
@@ -35,8 +35,8 @@ const Navbar = ({ title, showSearchBar }) => {
               </div>
               <input
                 type='text'
-                class='bg-gray-50 border border-[#CED4DA] text-dark-100 text-sm rounded-full block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600  dark:text-white outline-none'
-                placeholder='Search reference'
+                class='bg-white border border-[#CED4DA] text-dark-100 text-sm rounded-xl block w-full pl-10 p-2.5 outline-none'
+                placeholder='Search'
                 required
               />
             </div>
