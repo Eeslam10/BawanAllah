@@ -27,10 +27,13 @@ a {
     color: black;
 }
 
+.social_links{
+    display: flex;
+}
+
 .icon {
     color: rgba(0, 247, 255, 0.737);
     margin: 1rem;
     font-size: 28px;
-
 }
 
