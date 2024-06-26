@@ -1,15 +1,11 @@
 import React from 'react';
 import Logo from '../../assets/logo.svg';
-import Sidebar from '../Sidebar/Sidebar';
 
 const Navbar = ({ title, showSearchBar }) => {  
 
   return (
-    <div className='w-full flex items-center justify-between px-2 py-2 md:px-10 md:py-5 bg-white border border-b-[#CED4DA] mx-auto'>
-      <div className='flex items-center'>
-        {/* <h2 className='text-dark-100 text-sm md:text-xl whitespace-nowrap font-extrabold'>
-          {title}
-        </h2> */}
+    <div className='w-full flex items-center justify-between px-2 py-2 md:px-10 md:py-4 bg-white border border-b-[#CED4DA] mx-auto'>
+      <div className=''>
         <img src={Logo} alt="BawanAllah" />
       </div>
       <div className='w-60'>
@@ -21,7 +17,7 @@ const Navbar = ({ title, showSearchBar }) => {
               <div class='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
                 <svg
                   aria-hidden='true'
-                  class='w-4 h-4 text-gray-500 dark:text-gray-400'
+                  class='w-4 h-4 text-gray-500'
                   fill='currentColor'
                   viewBox='0 0 20 20'
                   xmlns='http://www.w3.org/2000/svg'
@@ -35,15 +31,13 @@ const Navbar = ({ title, showSearchBar }) => {
               </div>
               <input
                 type='text'
-                class='bg-white border border-[#CED4DA] text-dark-100 text-sm rounded-xl block w-full pl-10 p-2.5 outline-none'
+                class='bg-white border border-[#CED4DA] text-black text-sm rounded-xl block w-full pl-10 p-2.5 outline-none'
                 placeholder='Search'
                 required
               />
             </div>
           </form>
-  
-      </div>
-      
+      </div> 
     </div>
   );
 };

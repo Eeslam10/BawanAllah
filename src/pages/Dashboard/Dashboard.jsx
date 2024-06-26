@@ -1,44 +1,18 @@
 import React from 'react';
 import './Dashboard.css'
-import { IoIosSearch } from "react-icons/io";
-import { RxDashboard } from "react-icons/rx";
-import { BsBoxSeam } from "react-icons/bs";
-import { CiShoppingCart, CiDeliveryTruck,  CiSettings } from "react-icons/ci";
-import { PiChartLineUpLight } from "react-icons/pi";
-import { CgDanger } from "react-icons/cg";
+import Navbar from '../../components/Navbar/Navbar';
+import Sidebar from '../../components/Sidebar/Sidebar';
 
 const Dashboard = () => {
   return (
     <div className='dashboard'>
-        <nav>
-            <div className="h2"><h2>Bawan<span>Allah</span></h2> </div>
-            <div className="search"> <IoIosSearch style={{position: 'relative', left: '1.5rem', top: '3px', cursor: 'pointer'}}/> 
-            <input type="text" placeholder='Search' />
+        <Navbar />
+        <div className='flex'>
+            <Sidebar />
+            <div className="flex items-center py-4 px-8 lg:ml-[8%] ">
+                <p className='text-xl font-semibold'>Dashboard content here</p>
             </div>
-        </nav>
-    
-        <div className="container">
-            <div className="sideBar"> 
-                    <h6>GENERAL</h6>             
-                    <div className="bar"> <RxDashboard /> <p>DASHBOARD</p> </div>
-                    <div className="bar"> <BsBoxSeam/> <p>INVENTORY</p></div>
-                    <div className="bar"> <CiShoppingCart/> <p>SALES ORDER</p></div>
-                    <div className="bar"> <CiDeliveryTruck/> <p>Suppliers</p></div>
-                    <div className="bar"> <PiChartLineUpLight/> <p>Reports</p></div>
-                    <h6>SUPPORT</h6>
-                    <div className="bar"> <CgDanger/> <p>HELP</p></div>
-                    <div className="bar"> <CiSettings/> <p>SETTING</p></div>
-
-            </div>
-            <main>
-                <div className="sales">
-                    
-                </div>
-            </main>
-            <div className="admin">
-            
-            </div>
-        </div>
+      </div>
     </div>
   )
 }
