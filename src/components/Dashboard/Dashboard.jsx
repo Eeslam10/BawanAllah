@@ -16,7 +16,7 @@ const Dashboard = () => {
             <input type="text" placeholder='Search' />
             </div>
         </nav>
-        {/* <hr /> */}
+    
         <div className="container">
             <div className="sideBar"> 
                     <h6>GENERAL</h6>             
@@ -31,12 +31,12 @@ const Dashboard = () => {
 
             </div>
             <main>
-                {/* <div className="sales">
-                    <h1>islam</h1>
-                </div> */}
+                <div className="sales">
+                    
+                </div>
             </main>
             <div className="admin">
-                {/* <h1>issss</h1> */}
+            
             </div>
         </div>
     </div>
