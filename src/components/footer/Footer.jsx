@@ -23,7 +23,7 @@ const footer = () => {
                 <FaTwitter className='icon'/>
                 <FaInstagram className='icon'/>
             </div>
-            <hr />
+            {/* <hr /> */}
         </div>
         <div className="box">
             <p>Privacy Policy</p>
