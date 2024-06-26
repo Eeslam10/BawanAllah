@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+    padding: 1rem 2rem;
+}
+
+/* box */
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+span {
+    color: rgba(0, 247, 255, 0.866);
+}
+
+a {
+    text-decoration: none;
+    margin: 1rem;
+    color: black;
+}
+
+.icon {
+    color: rgba(0, 247, 255, 0.737);
+    margin: 1rem;
+    font-size: 28px;
+
+}
+
