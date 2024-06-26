@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
+import Footer from '../../components/footer/Footer'
 
 const Inventory = () => {
   return (
@@ -12,6 +13,7 @@ const Inventory = () => {
           <p className='text-xl font-semibold'>INVENTORY IN PROGRESS 😎</p>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

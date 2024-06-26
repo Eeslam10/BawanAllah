@@ -1,9 +1,9 @@
 import React from 'react';
-import '../footer/Footer.css'
+import './Footer.css'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className='footer'>
         <div className="box">
@@ -18,7 +18,7 @@ const footer = () => {
         </div>
         <div className="box">
             <p>Cultivating Efficency, Tracking Excellence - <br /> Your Trusted Inventory Management Partner</p>
-            <div>
+            <div className='social_links'>
                 <FaFacebook className='icon'/>
                 <FaTwitter className='icon'/>
                 <FaInstagram className='icon'/>
@@ -34,4 +34,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function SidebarLInks({ img, text, children = "", to ='' }) {
   return (
     <Link to={to}>
-      <div className="flex justify-start items-center p-4 text-[#212529] font-normal text-base relative my-[2px]">
+      <div className="flex justify-start items-center p-3 text-[#212529] font-normal text-base relative my-[2px]">
         <img src={img} className="w-6 h-6 mr-2" />
         {text}
         {children}

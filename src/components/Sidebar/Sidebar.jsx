@@ -22,7 +22,7 @@ const sidebar1 = [
 
 const Sidebar = () => {
   return (
-    <div className="sidebar px-6 py-8 w-1/5 flex flex-col justify-between h-[100%] bg-[#F4F5FC]">
+    <div className="sidebar px-6 py-8 w-1/5 flex flex-col justify-between h-full bg-[#F4F5FC]">
       <div>
         <h1 className='text-sm text-[#6C757D] font-bold uppercase mb-4'>General</h1>
         <ul className="w-full">
