@@ -15,6 +15,7 @@ import image4 from '../../assets/images/image4.jpg';
 import image5 from '../../assets/images/image5.jpg';
 import image6 from '../../assets/images/image6.jpg';
 import image7 from '../../assets/images/image7.png';
+import SalesData from '../../components/SalesData';
 
 const SalesOrder = () => {
   const images = [
@@ -33,7 +34,7 @@ const SalesOrder = () => {
       <div className='flex'>
       <Sidebar />
         <div className="w-3/5 border border-r-[#CED4DA]">
-          <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border-b border-[#CED4DA]'>
+          <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 border-b border-[#CED4DA]'>
             <p className='text-base font-bold'>Sales Orders</p>
             <div className='w-60'>
               <form className='flex items-center'>
@@ -65,15 +66,15 @@ const SalesOrder = () => {
             </div>
               </form> 
             </div> 
-            <button className='flex items-center gap-2 text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm'>
+            <button className='flex items-center gap-2 text-white bg-[#04B4FC] py-2 px-2 text-sm font-semibold rounded-md'>
             <AiOutlinePlusCircle size={25} />
               Place Order
             </button>
           </div>
-          <div className='py-4 px-6 h-[730px]'>
-          
-
+          <div className='-mt-2 mb-3'>
+            <SalesData />
           </div>
+          <hr />
         </div>
 
         <div className='admin bg-white w-3/12'>

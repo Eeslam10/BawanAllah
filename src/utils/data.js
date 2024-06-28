@@ -60,3 +60,12 @@ export const rows = [
     { src: image6, description: 'Samsumg Odyssey' },
     { src: image7, description: 'Logitech Superlight' }
   ];
+
+  export const sales = [
+    { id: 1, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
+    { id: 2, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
+    { id: 3, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
+    { id: 4, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
+
+  ];

@@ -97,7 +97,7 @@ const TableData = () => {
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
-          className={`p-2 ${currentPage === 1 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} `}
+          className={`px-2 py-1 leading-tight text-gray-500 bg-white border border-[#DEE2E6] hover:bg-gray-100 hover:text-gray-700 ${currentPage === 1 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} `}
         >
           <RiArrowLeftSLine className="h-5 w-5 text-gray-500" />
         </button>
@@ -105,7 +105,7 @@ const TableData = () => {
           <button
             key={page + 1}
             onClick={() => handlePageClick(page + 1)}
-            className={`border-x-2 border-y-2 px-2 bg-white text-blue-500 hover:bg-blue-500 hover:text-white ${currentPage === page + 1 ? 'bg-blue-500 text-white' : ''}`}
+            className={`px-2 py-1 leading-tight text-gray-500 bg-white border border-[#DEE2E6] hover:bg-gray-100 hover:text-gray-700 ${currentPage === page + 1 ? 'bg-blue-500 text-white' : ''}`}
           >
             {page + 1}
           </button>
@@ -113,7 +113,7 @@ const TableData = () => {
         <button
           onClick={handleNextPage}
           disabled={currentPage === Math.ceil(rows.length / rowsPerPage)}
-          className={`p-2 ${currentPage === Math.ceil(rows.length / rowsPerPage) ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} `}
+          className={`px-2 py-1 leading-tight text-gray-500 bg-white border border-[#DEE2E6] hover:bg-gray-100 hover:text-gray-700 ${currentPage === Math.ceil(rows.length / rowsPerPage) ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} `}
         >
           <RiArrowRightSLine className="h-5 w-5 text-gray-500" />
         </button>

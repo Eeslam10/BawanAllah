@@ -66,7 +66,7 @@ const Inventory = () => {
             </div>
               </form> 
             </div> 
-            <button className='flex items-center gap-2 text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm'>
+            <button className='flex items-center gap-2 text-white bg-[#04B4FC] py-2 px-2 text-sm font-semibold rounded-md'>
             <AiOutlinePlusCircle size={25} />
               Add New Product
             </button>
