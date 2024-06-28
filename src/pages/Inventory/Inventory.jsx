@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import Footer from '../../components/Footer/Footer'
-
+import Footer from '../../components/footer/Footer';
+import TableData from '../../components/TableData';
 import Admin from '../../assets/images/admin.png';
 import { CiMenuKebab, CiExport, CiDeliveryTruck } from "react-icons/ci";
 import { BiMemoryCard } from "react-icons/bi";
@@ -28,12 +28,12 @@ const Inventory = () => {
   ];
 
   return (
-    <div className='w-full '>
+    <div className='w-full'>
       <Navbar/>
-      <div className='flex'>
+      <div className='flex '>
       <Sidebar />
-        <div className="w-3/5 border border-r-[#CED4DA]">
-          <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border border-b-[#CED4DA]'>
+        <div className="w-3/5 border-r border-[#CED4DA]">
+          <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border-b border-[#CED4DA]'>
             <p className='text-base font-bold'>Inventory</p>
             <div className='w-60'>
               <form className='flex items-center'>
@@ -69,6 +69,7 @@ const Inventory = () => {
           </div>
           <div className='py-4 px-6'>
             <p className='text-base mb-4 font-semibold'>Product List</p>
+            <TableData />
           </div>
         </div>
 
