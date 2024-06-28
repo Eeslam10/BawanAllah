@@ -11,7 +11,7 @@ import SidebarLink from "./SidebarLInks";
 const sidebar1 = [
     { img:DB, text: "Dashboard", link: "/" },
     { img: inv, text: "Inventory", link: "/inventory" },
-    { img: orders, text: "Sales Order", link: "" },
+    { img: orders, text: "Sales Order", link: "/sales-order" },
     { img: supplies, text: "Supplies", link: "/suppliers" },
     { img: reports, text: "Reports", link: "" },
   ];

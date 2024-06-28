@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/footer/Footer'
 import Chart from 'react-apexcharts';
 import { useTable } from 'react-table';
 import { FaApple, FaMicrosoft, FaGoogle, FaAmazon, FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaSnapchat, FaYoutube } from 'react-icons/fa';
