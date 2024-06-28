@@ -36,7 +36,7 @@ const Navbar = ({ title, showSearchBar }) => {
                 required
               />
             </div>
-          </form>
+          </form> 
       </div> 
     </div>
   );
