@@ -30,7 +30,7 @@ const Inventory = () => {
 
   return (
     <div className='w-full'>
-      <Navbar/>
+      <Navbar />
       <div className='flex'>
       <Sidebar />
         <div className="w-3/5 border border-r-[#CED4DA]">

@@ -66,7 +66,7 @@ const Dashboard = () => {
   });
   return (
     <div className='dashboard bg-[#F4F5FC]'>
-      <Navbar />
+      <Navbar showSearchBar={true} />
       <div className='flex'>
         <Sidebar />
         <div className='w-3/5 mt-4'>
