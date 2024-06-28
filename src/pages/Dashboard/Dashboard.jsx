@@ -7,7 +7,7 @@ import { SlCalender } from "react-icons/sl";
 import { BiDollar } from "react-icons/bi";
 import { IoBagOutline } from "react-icons/io5";
 import Chart from "react-apexcharts";
-import Footer from '../../components/footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import Admin from '../../assets/images/admin.png';
 import { CiMenuKebab, CiExport, CiDeliveryTruck } from "react-icons/ci";
 import { BiMemoryCard } from "react-icons/bi";
@@ -44,6 +44,12 @@ const Dashboard = () => {
       xaxis: {
         categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
+      plotOptions: {
+        bar: {
+          borderRadius: 10,  // Set the border radius to make the top rounded
+        },
+      },
+      colors: ['#87CEEB', '#9933FF']
     },
     series: [
       {
