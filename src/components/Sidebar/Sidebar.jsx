@@ -12,8 +12,8 @@ const sidebar1 = [
     { img:DB, text: "Dashboard", link: "/" },
     { img: inv, text: "Inventory", link: "/inventory" },
     { img: orders, text: "Sales Order", link: "" },
+    { img: supplies, text: "Supplies", link: "/suppliers" },
     { img: reports, text: "Reports", link: "" },
-    { img: supplies, text: "Supplies", link: "" },
   ];
   const sidebar2 = [
     { img: help, text: "Help" },

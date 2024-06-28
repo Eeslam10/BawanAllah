@@ -46,7 +46,7 @@ const Dashboard = () => {
       },
       plotOptions: {
         bar: {
-          borderRadius: 10,  // Set the border radius to make the top rounded
+            // Set the border radius to make the top rounded
         },
       },
       colors: ['#87CEEB', '#9933FF']
@@ -58,7 +58,7 @@ const Dashboard = () => {
       },
       {
         name: "Stock Out",
-        data: [5, 21, 30, 34, 21, 30, 41, 52, 51, 33, 44, 22]
+        data: [17, 21, 30, 34, 21, 30, 41, 52, 51, 33, 44, 22]
       }
     ]
 
@@ -170,7 +170,7 @@ const Dashboard = () => {
                 <p className='text-xs'>Admin</p>
               </div>
             </div>
-            <CiMenuKebab size={30} className='border-2 p-1 rounded-md' />
+            <CiMenuKebab size={30} className='border-2 p-1 rounded-md cursor-pointer' />
           </div>
           <div className='quick flex flex-col gap-4 '>
             <p className='mx-14 font-semibold mt-4'>Quick Actions</p>
@@ -203,7 +203,7 @@ const Dashboard = () => {
               <p>ctrl + s</p>
             </div>
             <hr />
-            <div className='electrons flex flex-col gap-6 mx-14'>
+            <div className='electrons flex flex-col gap-7 mx-14'>
               <p className=" font-bold text-sm my-2 ">Fast Moving Items</p>
               <div className="image-list space-y-8">
                 {images.map((image, index) => (
