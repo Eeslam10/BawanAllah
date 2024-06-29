@@ -8,8 +8,8 @@ const SidebarLink = ({ img, text, to }) => {
         to={to}
         className={({ isActive }) =>
           `${
-            isActive ? 'bg-[#04B4FC] text-white font-bold text-base' : ''
-          } flex justify-start items-center text-[#212529] rounded-lg p-2 gap-4 font-normal text-base relative`
+            isActive ? 'bg-[#04B4FC] text-white font-bold p-2 text-base' : ''
+          } flex justify-start items-center text-[#212529] rounded-lg p-1 font-normal text-base relative`
         }
       >
         <img src={img} alt={`${text} icon`} className="w-4 h-4 mr-2" />

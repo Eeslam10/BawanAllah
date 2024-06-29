@@ -6,6 +6,7 @@ import Admin from '../../assets/images/admin.png';
 import { CiMenuKebab } from "react-icons/ci";
 import Chart from 'react-apexcharts';
 import { SlPrinter } from "react-icons/sl";
+import MobileSidebar from '../../components/Sidebar/MobileSidebar';
 
 
 const Reports = () => {
@@ -173,6 +174,7 @@ const Reports = () => {
     return (
         <div className='w-full '>
             <Navbar />
+            <MobileSidebar />
             <div className='flex'>
                 <Sidebar />
                 <div className="w-3/5 border border-r-[#CED4DA]">

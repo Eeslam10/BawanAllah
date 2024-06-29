@@ -17,6 +17,7 @@ import image6 from '../../assets/images/image6.jpg';
 import image7 from '../../assets/images/image7.png';
 import SalesData from '../../components/Sales/SalesData';
 import SalesChart from '../../components/Sales/SalesChart';
+import MobileSidebar from '../../components/Sidebar/MobileSidebar';
 
 const SalesOrder = () => {
   const images = [
@@ -32,6 +33,7 @@ const SalesOrder = () => {
   return (
     <div className='w-full'>
       <Navbar/>
+      <MobileSidebar />
       <div className='flex'>
       <Sidebar />
         <div className="w-3/5 border border-r-[#CED4DA]">

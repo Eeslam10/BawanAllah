@@ -15,6 +15,7 @@ import image4 from '../../assets/images/image4.jpg';
 import image5 from '../../assets/images/image5.jpg';
 import image6 from '../../assets/images/image6.jpg';
 import image7 from '../../assets/images/image7.png';
+import MobileSidebar from '../../components/Sidebar/MobileSidebar';
 
 const Inventory = () => {
 
@@ -31,6 +32,7 @@ const Inventory = () => {
   return (
     <div className='w-full'>
       <Navbar />
+      <MobileSidebar />
       <div className='flex'>
       <Sidebar />
         <div className="w-3/5 border border-r-[#CED4DA]">

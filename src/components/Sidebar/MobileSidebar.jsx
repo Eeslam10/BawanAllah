@@ -1,4 +1,6 @@
-import React from 'react';
+import { useState } from 'react'
+import { MdCancel } from "react-icons/md";
+import { BiMenuAltRight } from "react-icons/bi";
 import DB from '../../assets/db.svg';
 import inv from '../../assets/inv.svg';
 import orders from '../../assets/orders.svg';
@@ -21,10 +23,27 @@ const sidebar2 = [
   { img: settings, text: "Settings", link: "/settings" },
 ];
 
-const Sidebar = () => {
+const MobileSidebar = () => {
+    const [menubar, setmenubar] = useState(false);
+
   return (
-    <div className="sidebar px-6 py-8 w-1/5 hidden lg:flex flex-col justify-between h-screen bg-[#F4F5FC]">
-      <div>
+    <div>
+        <div className="lg:hidden absolute right-4 top-6">
+        <BiMenuAltRight
+          onClick={() => setmenubar(!menubar)}
+          role="button"
+          color="#AAA5F8"
+          size={40}
+        />
+      </div>
+      <div
+        className={`w-[60%] fixed lg:hidden right-0 top-0 bottom-0 h-screen text-[#FFECE5] bg-[#F8F9FA] flex flex-col gap-8 py-6 px-0 z-10 ${
+          menubar ? "translate-x-[0%]" : "translate-x-[100%] hidden"
+        }`}
+      >
+        {" "}
+        <div>
+        <MdCancel onClick={() => setmenubar(!menubar)} size={40} />
         <h1 className='text-sm text-[#6C757D] font-bold uppercase mb-3'>General</h1>
         <ul className="w-full ">
           {sidebar1.map((link, i) => (
@@ -45,8 +64,9 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default Sidebar;
+export default MobileSidebar
