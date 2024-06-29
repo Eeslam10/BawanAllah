@@ -75,7 +75,7 @@ const SalesData = () => {
           {sales.map((sale, index) => (
             <tr
               key={sale.id}
-              className={`bg-white text-[#212529] text-xs font-medium border rounded-lg ${index < sales.length - 1 ? 'mb-2' : ''}`}
+              className={`bg-white text-[#212529] text-xs text-center font-medium border rounded-lg ${index < sales.length - 1 ? 'mb-2' : ''}`}
             >
               <td className="px-4 py-2">
                 <input
@@ -93,7 +93,7 @@ const SalesData = () => {
               <td className="px-4 py-2">
               <a href='#' className="text-[#04B4FC] hover:underline">
                   View Invoice
-                </a>
+              </a>
               </td>
             </tr>
           ))}
