@@ -26,7 +26,7 @@ const Sidebar = () => {
     <div className="sidebar px-6 py-8 w-1/5 hidden lg:flex flex-col justify-between h-screen bg-[#F4F5FC]">
       <div>
         <h1 className='text-sm text-[#6C757D] font-bold uppercase mb-3'>General</h1>
-        <ul className="w-full ">
+        <ul className="w-full ml-4">
           {sidebar1.map((link, i) => (
             <SidebarLink
               text={link.text}
@@ -38,7 +38,7 @@ const Sidebar = () => {
         </ul>
         <div className='mt-5'>
           <h1 className='text-sm text-[#6C757D] font-bold uppercase mb-3'>Support</h1>
-          <ul className=''>
+          <ul className='ml-4'>
             {sidebar2.map((link, i) => (
               <SidebarLink text={link.text} img={link.img} key={i} to={link.link} />
             ))}
