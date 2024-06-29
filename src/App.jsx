@@ -8,8 +8,7 @@ import Suppliers from './pages/Suppliers/Suppliers'
 import SalesOrder from './pages/SalesOrder/SalesOrder';
 import Reports from './pages/Reports/Reports';
 
-
-function App() {
+function App() {  
   const router = createBrowserRouter([
     { path: "/", element: <Dashboard /> },
     { path: "/inventory", element: <Inventory /> },
