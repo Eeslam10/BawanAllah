@@ -44,7 +44,7 @@ const SalesData = () => {
   return (
     <div className="container mx-auto">
       <table className="min-w-full border-separate border-spacing-y-2">
-        <thead className='text-[#5C6F88] text-xs font-bold bg-[#F4F6FC] p-36'>
+        <thead className='text-[#5C6F88] text-xs font-bold bg-[#F4F6FC] p-36 whitespace-nowrap'>
           <tr>
             <th className="px-4 py-2">
               <input

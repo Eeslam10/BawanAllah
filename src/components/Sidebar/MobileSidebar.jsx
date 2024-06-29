@@ -28,7 +28,7 @@ const MobileSidebar = () => {
 
   return (
     <div>
-        <div className="lg:hidden absolute right-4 top-6">
+        <div className="lg:hidden absolute right-4 ml-4 -top-0">
         <BiMenuAltRight
           onClick={() => setmenubar(!menubar)}
           role="button"
@@ -37,7 +37,7 @@ const MobileSidebar = () => {
         />
       </div>
       <div
-        className={`w-[60%] fixed lg:hidden right-0 top-0 bottom-0 h-screen text-[#FFECE5] bg-[#F8F9FA] flex flex-col gap-8 py-6 px-0 z-10 ${
+        className={`w-[60%] fixed lg:hidden right-0 top-0 bottom-0 h-screen text-[#FFECE5] bg-[#F8F9FA] flex flex-col gap-8 px-5 z-10 ${
           menubar ? "translate-x-[0%]" : "translate-x-[100%] hidden"
         }`}
       >
@@ -45,7 +45,7 @@ const MobileSidebar = () => {
         <div>
         <MdCancel onClick={() => setmenubar(!menubar)} size={40} />
         <h1 className='text-sm text-[#6C757D] font-bold uppercase mb-3'>General</h1>
-        <ul className="w-full ">
+        <ul className="w-full ml-4">
           {sidebar1.map((link, i) => (
             <SidebarLink
               text={link.text}
@@ -57,7 +57,7 @@ const MobileSidebar = () => {
         </ul>
         <div className='mt-5'>
           <h1 className='text-sm text-[#6C757D] font-bold uppercase mb-3'>Support</h1>
-          <ul className=''>
+          <ul className='ml-4'>
             {sidebar2.map((link, i) => (
               <SidebarLink text={link.text} img={link.img} key={i} to={link.link} />
             ))}

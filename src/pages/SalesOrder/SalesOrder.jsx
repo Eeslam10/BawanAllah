@@ -36,10 +36,10 @@ const SalesOrder = () => {
       <MobileSidebar />
       <div className='flex'>
       <Sidebar />
-        <div className="w-3/5 border border-r-[#CED4DA]">
+        <div className="w-full lg:w-3/5 lg:border lg:border-r-[#CED4DA]">
           <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 border-b border-[#CED4DA]'>
             <p className='text-base font-bold'>Sales Orders</p>
-            <div className='w-60'>
+            <div className='w-60 hidden lg:block'>
               <form className='flex items-center'>
             <label htmlFor='simple-search' class='sr-only'>
               Search
@@ -74,7 +74,7 @@ const SalesOrder = () => {
               Place Order
             </button>
           </div>
-          <div className='-mt-2 mb-3'>
+          <div className='-mt-2 mb-3 overflow-x-auto'>
             <SalesData />
           </div>
           <hr />
@@ -84,7 +84,7 @@ const SalesOrder = () => {
           <hr />
         </div>
 
-        <div className='admin bg-white w-3/12'>
+        <div className='admin hidden lg:block bg-white w-3/12'>
           <div className='flex justify-around items-center mt-4'>
             <div className='flex gap-2'>
               <img src={Admin} className='w-9 h-9 rounded-full' />

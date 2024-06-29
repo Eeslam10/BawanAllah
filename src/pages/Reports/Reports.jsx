@@ -201,12 +201,12 @@ const Reports = () => {
                                             ></path>
                                         </svg>
                                     </div>
-                                    {/* <input
+                                    <input
                                         type='text'
                                         className='bg-white border border-[#CED4DA] text-black text-sm rounded-xl block w-full pl-10 p-2.5 outline-none'
                                         placeholder='Search'
                                         required
-                                    /> */}
+                                    />
                                 </div>
                             </form>
                         </div>
