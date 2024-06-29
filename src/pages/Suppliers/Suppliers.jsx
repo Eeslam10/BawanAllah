@@ -40,73 +40,76 @@ const options = {
 
 const series = [44, 55, 41, 17]; // Performance data for the companies
 
+const total = series.reduce((acc, value) => acc + value, 0);
+const percentages = series.map(value => ((value / total) * 100).toFixed(2));
+
 
 const Suppliers = () => {
   const data = React.useMemo(
     () => [
       {
         supplier: { name: 'Apple', icon: <FaApple color="#A2AAAD" /> },
-        email: 'apple@example.com',
+        email: 'apple@gmail.com',
         contact: '123-456-7890',
         history: 'Order History'
       },
       {
         supplier: { name: 'Microsoft', icon: <FaMicrosoft color="#737373" /> },
-        email: 'microsoft@example.com',
+        email: 'microsoft@gmail.com',
         contact: '234-567-8901',
         history: 'Order History'
       },
       {
         supplier: { name: 'Google', icon: <FaGoogle color="#4285F4" /> },
-        email: 'google@example.com',
+        email: 'google@gmail.com',
         contact: '345-678-9012',
         history: 'Order History'
       },
       {
         supplier: { name: 'Amazon', icon: <FaAmazon color="#FF9900" /> },
-        email: 'amazon@example.com',
+        email: 'amazon@gmail.com',
         contact: '456-789-0123',
         history: 'Order History'
       },
       {
         supplier: { name: 'Facebook', icon: <FaFacebook color="#3b5998" /> },
-        email: 'facebook@example.com',
+        email: 'facebook@gmail.com',
         contact: '567-890-1234',
         history: 'Order History'
       },
       {
         supplier: { name: 'Twitter', icon: <FaTwitter color="#1DA1F2" /> },
-        email: 'twitter@example.com',
+        email: 'twitter@gmail.com',
         contact: '678-901-2345',
         history: 'Order History'
       },
       {
         supplier: { name: 'LinkedIn', icon: <FaLinkedin color="#0077B5" /> },
-        email: 'linkedin@example.com',
+        email: 'linkedin@gmail.com',
         contact: '789-012-3456',
         history: 'Order History'
       },
       {
         supplier: { name: 'Github', icon: <FaGithub color="#181717" /> },
-        email: 'github@example.com',
+        email: 'github@gmail.com',
         contact: '890-123-4567',
         history: 'Order History'
       },
       {
         supplier: { name: 'Instagram', icon: <FaInstagram color="#E1306C" /> },
-        email: 'instagram@example.com',
+        email: 'instagram@gmail.com',
         contact: '901-234-5678',
         history: 'Order History'
       },
       {
         supplier: { name: 'Snapchat', icon: <FaSnapchat color="#FFFC00" /> },
-        email: 'snapchat@example.com',
+        email: 'snapchat@gmail.com',
         contact: '012-345-6789',
         history: 'Order History'
       },
       {
         supplier: { name: 'YouTube', icon: <FaYoutube color="#FF0000" /> },
-        email: 'youtube@example.com',
+        email: 'youtube@gmail.com',
         contact: '123-456-7890',
         history: 'Order History'
       }
@@ -278,15 +281,15 @@ const Suppliers = () => {
                   options={options}
                   series={series}
                   type="pie"
-                  width="300"
+                  width="335"
                 />
               </div>
-              <div className="font-semibold mr-28 ">
+              <div className="font-normal mr-28 ">
                 <ul>
                   {options.labels.map((label, index) => (
-                    <li key={index} className="text-sm leading-8" style={{ color: options.colors[index] }}>
-                      {label}
-                    </li>
+                     <li key={index} className="text-sm leading-8 " style={{ color: options.colors[index] }}>
+                     {label} {percentages[index]}%
+                   </li>
                   ))}
                 </ul>
               </div>
