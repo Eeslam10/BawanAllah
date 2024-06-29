@@ -65,11 +65,11 @@ const Dashboard = () => {
 
   });
   return (
-    <div className='dashboard bg-[#F4F5FC]'>
+    <div className='dashboard'>
       <Navbar showSearchBar={true} />
       <div className='flex'>
         <Sidebar />
-        <div className='w-3/5 mt-4'>
+        <div className='w-3/5 pt-4 border-r-2 border-b-2 bg-[#F4F5FC]'>
           <h3 className='m-1 ml-10 font-bold'>Sales Summary</h3>
           <div className='flex gap-4 ml-10'>
             <div className='flex items-center  bg-white w-48 p-3 rounded-md cursor-pointer'>
@@ -161,7 +161,7 @@ const Dashboard = () => {
           </div>
 
         </div>
-        <div className='admin bg-white w-3/12'>
+        <div className='admin bg-white w-3/12 border-b-2'>
           <div className='flex justify-around items-center mt-4'>
             <div className='flex gap-2'>
               <img src={Admin} className='w-9 h-9 rounded-full' />
@@ -217,7 +217,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
 
   )
