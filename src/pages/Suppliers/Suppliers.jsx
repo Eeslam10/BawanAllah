@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import Chart from 'react-apexcharts';
 import { useTable } from 'react-table';
 import { FaApple, FaMicrosoft, FaGoogle, FaAmazon, FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaSnapchat, FaYoutube } from 'react-icons/fa';
@@ -9,6 +9,7 @@ import Admin from '../../assets/images/admin.png';
 import { CiMenuKebab, CiExport, CiDeliveryTruck } from "react-icons/ci";
 import { BiMemoryCard } from "react-icons/bi";
 import { BsBox2 } from "react-icons/bs";
+import {AiOutlinePlusCircle} from "react-icons/ai"
 
 const options = {
   chart: {
@@ -192,7 +193,10 @@ const Suppliers = () => {
                 </div>
               </form>
             </div>
-            <button className='text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm'>Edit Suppliers</button>
+            <button className='flex items-center gap-2  text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm'>
+            <AiOutlinePlusCircle size={25} />
+              Edit Suppliers
+              </button>
           </div>
           <div className='py-4 px-6'>
             <table {...getTableProps()} className="min-w-full ">

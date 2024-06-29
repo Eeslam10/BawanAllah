@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import Footer from '../../components/footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import TableData from '../../components/TableData';
 import Admin from '../../assets/images/admin.png';
 import { AiOutlinePlusCircle } from "react-icons/ai";

@@ -13,7 +13,7 @@ const sidebar1 = [
     { img: inv, text: "Inventory", link: "/inventory" },
     { img: orders, text: "Sales Order", link: "/sales-order" },
     { img: supplies, text: "Suppliers", link: "/suppliers" },
-    { img: reports, text: "Reports", link: "" },
+    { img: reports, text: "Reports", link: "/reports" },
   ];
   const sidebar2 = [
     { img: help, text: "Help" },
