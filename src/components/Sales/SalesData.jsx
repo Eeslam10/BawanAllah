@@ -21,7 +21,6 @@ const SalesData = () => {
     setAllChecked(newCheckedRows.every(Boolean));
   };
 
-
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -29,7 +28,7 @@ const SalesData = () => {
   };
 
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(rows.length / salesPerPage)) {
+    if (currentPage < Math.ceil(sales.length / salesPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -41,8 +40,6 @@ const SalesData = () => {
   const indexOfLastRow = currentPage * salesPerPage;
   const indexOfFirstRow = indexOfLastRow - salesPerPage;
   const currentSales = sales.slice(indexOfFirstRow, indexOfLastRow);
-
-
 
   return (
     <div className="container mx-auto">
@@ -72,10 +69,10 @@ const SalesData = () => {
           </tr>
         </thead>
         <tbody>
-          {sales.map((sale, index) => (
+          {currentSales.map((sale, index) => (
             <tr
               key={sale.id}
-              className={`bg-white text-[#212529] text-xs text-center font-medium border rounded-lg ${index < sales.length - 1 ? 'mb-2' : ''}`}
+              className={`bg-white text-[#212529] text-xs text-center font-medium border rounded-lg ${index < currentSales.length - 1 ? 'mb-2' : ''}`}
             >
               <td className="px-4 py-2">
                 <input
@@ -111,7 +108,7 @@ const SalesData = () => {
           <button
             key={page + 1}
             onClick={() => handlePageClick(page + 1)}
-            className={`px-2 py-1 leading-tight text-gray-500 bg-white border border-[#DEE2E6] hover:bg-gray-100 hover:text-gray-700 ${currentPage === page + 1 ? 'bg-blue-500 text-white' : ''}`}
+            className={`px-2 py-1 leading-tight text-gray-500 bg-white border border-[#DEE2E6] hover:bg-gray-100 hover:text-[#04B4FC] ${currentPage === page + 1 ? 'bg-blue-500 text-white' : ''}`}
           >
             {page + 1}
           </button>

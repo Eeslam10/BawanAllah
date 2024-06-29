@@ -67,5 +67,13 @@ export const rows = [
     { id: 3, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
     { id: 4, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
     { id: 5, productName: 'Mac Pro', orderCode: '#0001', category: 'Laptop', quantity: 1, totalPrice: '$1,241', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'iphone', orderCode: '#0002', category: 'phone', quantity: 1, totalPrice: '$1,499', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'iphone', orderCode: '#0002', category: 'phone', quantity: 1, totalPrice: '$1,499', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'iphone', orderCode: '#0002', category: 'phone', quantity: 1, totalPrice: '$1,499', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'iphone', orderCode: '#0002', category: 'phone', quantity: 1, totalPrice: '$1,499', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'iphone', orderCode: '#0002', category: 'phone', quantity: 1, totalPrice: '$1,499', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'Airpod Pro', orderCode: '#0003', category: 'Earphones', quantity: 1, totalPrice: '$249', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'Airpod Pro', orderCode: '#0003', category: 'Earphones', quantity: 1, totalPrice: '$249', last7Days: 'Last 7 Days' },
+    { id: 5, productName: 'Airpod Pro', orderCode: '#0003', category: 'Earphones', quantity: 1, totalPrice: '$249', last7Days: 'Last 7 Days' },
 
   ];
