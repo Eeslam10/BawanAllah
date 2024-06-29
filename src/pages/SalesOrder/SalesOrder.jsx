@@ -15,7 +15,8 @@ import image4 from '../../assets/images/image4.jpg';
 import image5 from '../../assets/images/image5.jpg';
 import image6 from '../../assets/images/image6.jpg';
 import image7 from '../../assets/images/image7.png';
-import SalesData from '../../components/SalesData';
+import SalesData from '../../components/Sales/SalesData';
+import SalesChart from '../../components/Sales/SalesChart';
 
 const SalesOrder = () => {
   const images = [
@@ -73,6 +74,10 @@ const SalesOrder = () => {
           </div>
           <div className='-mt-2 mb-3'>
             <SalesData />
+          </div>
+          <hr />
+          <div className='p-4'>
+            <SalesChart />
           </div>
           <hr />
         </div>

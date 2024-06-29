@@ -118,8 +118,8 @@ const Dashboard = () => {
                 <p className=" font-bold text-sm mx-4 ">Sales Order</p>
                 <p className=" font-bold text-sm mx-4 ">last 7 days</p>
               </div>
-              <div className="">
-                <table className="min-w-full bg-white p-4">
+              <div className="pb-16 border-b-4 border-white">
+                <table className="min-w-full bg-white p-4 ">
 
                   <tbody className='text-xs'>
                     <tr className='text-sm bg-slate-200 font-semibold text-slate-500 ' >

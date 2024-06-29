@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import { sales } from '../utils/data';
+import { sales } from '../../utils/data';
 
 const SalesData = () => {
   const [allChecked, setAllChecked] = useState(false);
@@ -63,7 +63,7 @@ const SalesData = () => {
             <th className="px-4 py-2">Quantity</th>
             <th className="px-4 py-2">Total Price</th>
             <th className="px-4 py-2">
-                <select className="form-select bg-transparent outline-none">
+                <select className="text-[#04B4FC] bg-transparent outline-none">
                   <option>Last 7 Days</option>
                   <option>Last 14 Days</option>
                   <option>Last 30 Days</option>
@@ -75,7 +75,7 @@ const SalesData = () => {
           {sales.map((sale, index) => (
             <tr
               key={sale.id}
-              className={`bg-white text-[#212529] text-xs font-medium border rounded-lg ${index < sales.length - 1 ? 'mb-2' : ''}`}
+              className={`bg-white text-[#212529] text-xs text-center font-medium border rounded-lg ${index < sales.length - 1 ? 'mb-2' : ''}`}
             >
               <td className="px-4 py-2">
                 <input
@@ -93,7 +93,7 @@ const SalesData = () => {
               <td className="px-4 py-2">
               <a href='#' className="text-[#04B4FC] hover:underline">
                   View Invoice
-                </a>
+              </a>
               </td>
             </tr>
           ))}
