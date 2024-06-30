@@ -172,66 +172,90 @@ const Reports = () => {
     const percentages = performanceData.map(value => ((value / total) * 100).toFixed(2));
 
     return (
-        <div className='w-full '>
+        <div className="w-full">
             <Navbar />
+
             <MobileSidebar />
-            <div className='flex'>
+            <div className="flex ">
                 <Sidebar />
-                <div className="w-3/5 border border-r-[#CED4DA]">
-                    <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border border-b-[#CED4DA]'>
-                        <p className='text-base font-bold'>Reports</p>
-                        <div className='w-60'>
-                            <form className='flex items-center'>
-                                <label htmlFor='simple-search' class='sr-only'>
+                <div className="w-full lg:w-3/5 border border-r-[#CED4DA]">
+                    <div className="flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border border-b-[#CED4DA]">
+                        <p className="text-base font-bold">Reports</p>
+                        <div className="w-60">
+                            {/* <form className="flex items-center hidden lg:block">
+                                <label htmlFor="simple-search" className="sr-only">
                                     Search
                                 </label>
-                                <div className='relative w-full'>
-                                    <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+                                <div className="relative w-full">
+                                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                         <svg
-                                            aria-hidden='true'
-                                            className='w-4 h-4 text-gray-500'
-                                            fill='currentColor'
-                                            viewBox='0 0 20 20'
-                                            xmlns='http://www.w3.org/2000/svg'
+                                            aria-hidden="true"
+                                            className="w-4 h-4 text-gray-500"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fillRule='evenodd'
-                                                d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z'
-                                                clipRule='evenodd'
+                                                fillRule="evenodd"
+                                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                     </div>
                                     <input
-                                        type='text'
-                                        className='bg-white border border-[#CED4DA] text-black text-sm rounded-xl block w-full pl-10 p-2.5 outline-none'
-                                        placeholder='Search'
+                                        type="text"
+                                        className="bg-white border border-[#CED4DA] text-black text-sm rounded-xl block w-full pl-10 p-2.5 outline-none"
+                                        placeholder="Search"
                                         required
                                     />
                                 </div>
-                            </form>
+                            </form> */}
                         </div>
-                        <button className='text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-md flex gap-4 items-center' ><SlPrinter size={25} />Print Reports</button>
+                        <button className="lflex gap-2 text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-md flex items-center w-full sm:w-auto">
+                            <SlPrinter size={25} />
+                            Print Reports
+                        </button>
                     </div>
-                    <div className=' px-6 flex justify-between items-center'>
-                        <p className='text-base font-semibold'>Weekly Sales</p>
-                        <p className='text-sm font-medium text-blue-400 cursor-pointer'> &lt;  Aug 19-25  &gt;</p>
+                    <div className='block lg:hidden flex mb-4'>
+
+                        <div className="flex justify-start items-center flex-col flex-row ">
+                            <p className="text-center font-semibold mt-0">Top Suppliers</p>
+                            <Chart options={chartConfige} series={performanceData} type="pie" width="400" />
+                        </div>
+                        <div className="font-normal ">
+                            <ul className='flex flex-wrap mt-8'>
+                                {chartConfige.labels.map((label, index) => (
+                                    <li key={index} className="text-sm leading-8" style={{ color: chartConfige.colors[index] }}>
+                                        {label} - {percentages[index]}%
+                                    </li>
+                                ))}
+                            </ul>
+                            <hr />
+                        </div>
+                    </div>
+                    <div className="px-6 flex justify-between items-center">
+                        <p className="text-base font-semibold">Weekly Sales</p>
+                        <p className="text-sm font-medium text-blue-400 cursor-pointer">
+                            &lt; Aug 19-25 &gt;
+                        </p>
                     </div>
                     <div className="flex justify-center items-center flex-col">
-                        <div className="mixed-chart rounded overflow-hidden" >
+                        <div className="mixed-chart rounded overflow-hidden" style={{ width: '100%', maxWidth: '700px' }}>
                             <Chart
                                 options={options}
                                 series={series}
                                 type="heatmap"
-                                width="700"
+                                width="100%"
                                 height="380"
+
                             />
                         </div>
-                        <p>hhhhh</p>
+                        {/* <p>hhhhh</p> */}
                     </div>
                     <hr />
-                    <div className='flex gap-2 px-6 py-2'>
-                        <p className=' font-semibold'>Supplier Performance Report</p>
-                        <p>(Top 5 Suppliers)</p>
+                    <div className=" text-center py-2">
+                        <p className="font-semibold text-base sm:text-sm ">Supplier Performance Report</p>
+                        <p className='text-base sm:text-sm'>(Top 5 Suppliers)</p>
                     </div>
                     <hr />
                     <div className="horizontal flex justify-center">
@@ -240,61 +264,87 @@ const Reports = () => {
                         </div>
                     </div>
                 </div>
+                
+                <div className="w-3/12 bg-white">
+                    <div className="flex justify-around mt-4 mb-6 hidden lg:block">
+                        <div className='flex justify-around'>
 
-                <div className='admin bg-white w-3/12 '>
-                    <div className='flex justify-around items-center mt-4 mb-6'>
-                        <div className='flex gap-2'>
-                            <img src={Admin} className='w-9 h-9 rounded-full' />
-                            <div className='bryan '>
-                                <p className='text-sm font-semibold'>Bryan Doe</p>
-                                <p className='text-xs'>Admin</p>
+                        <div className="flex gap-2  ">
+                            <img src={Admin} className="w-9 h-9 rounded-full" />
+                            <div className="bryan">
+                                <p className="text-sm font-semibold">Bryan Doe</p>
+                                <p className="text-xs">Admin</p>
                             </div>
                         </div>
-                        <CiMenuKebab size={30} className='border-2 p-1 rounded-md' />
-                    </div>
-                    <hr />
-                    <p className='text-center font-semibold mt-4'>Top Suppliers</p>
-                    <div className="flex justify-start items-center flex-col">
-                        <Chart
-                            options={chartConfige}
-                            series={performanceData}
-                            type="pie"
-                            width="320"
-                        />
-                    </div>
-                    <div className="font-normal text-center">
-                        <ul>
-                            {chartConfige.labels.map((label, index) => (
-                                <li key={index} className="text-sm leading-8" style={{ color: chartConfige.colors[index] }}>
-                                    {label} - {percentages[index]}%
-                                </li>
-                            ))}
-                        </ul>
-                        <hr className='mt-12' />
-                    </div>
-                    <div>
-                        <p className='font-semibold text-lg text-center mt-4'>Reports for last Month</p>
-                        <p className=' text-base text-center'>From 01 Jul - 21 Jul</p>
-                        <div className='flex justify-center items-center gap-8 text-sm my-8'>
-                        <button className='text-white bg-blue-400 rounded px-4 py-2'>Download PDF</button>
-                        <p className='text-blue-400 cursor-pointer'>View</p>
+                        <CiMenuKebab size={30} className="border-2 p-1 rounded-md" />
                         </div>
                     </div>
                     <hr />
-                    <div>
-                        <p className='font-semibold text-lg text-center mt-2'>Defect Rate Report</p>
-                        <p className=' text-base text-center'>Product Defect & Supply Origin</p>
-                        <div className='flex justify-center items-center gap-8 text-sm my-8'>
-                        <button className='text-white bg-purple-700 rounded px-4 py-2'>Download PDF</button>
-                        <p className='text-purple-700 cursor-pointer'>View</p>
+
+                 
+
+                    <div className='hidden lg:block'>
+
+                        <div className="flex justify-start items-center flex-col flex-row ">
+                            <p className="text-center font-semibold mt-4">Top Suppliers</p>
+                            <Chart options={chartConfige} series={performanceData} type="pie" width="320" />
+                        </div>
+                        <div className="font-normal text-center">
+                            <ul>
+                                {chartConfige.labels.map((label, index) => (
+                                    <li key={index} className="text-sm leading-8" style={{ color: chartConfige.colors[index] }}>
+                                        {label} - {percentages[index]}%
+                                    </li>
+                                ))}
+                            </ul>
+                            <hr className="mt-12" />
+                        </div>
+                    </div>
+                    <div className='hidden lg:block'>
+                        <div>
+                            <p className="font-semibold text-lg text-center mt-4">Reports for last Month</p>
+                            <p className="text-base text-center">From 01 Jul - 21 Jul</p>
+                            <div className="flex justify-center items-center gap-8 text-sm my-8">
+                                <button className="text-white bg-blue-400 rounded px-4 py-2">Download PDF</button>
+                                <p className="text-blue-400 cursor-pointer">View</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div>
+                            <p className="font-semibold text-lg text-center mt-2">Defect Rate Report</p>
+                            <p className="text-base text-center">Product Defect & Supply Origin</p>
+                            <div className="flex justify-center items-center gap-8 text-sm my-8">
+                                <button className="text-white bg-purple-700 rounded px-4 py-2">Download PDF</button>
+                                <p className="text-purple-700 cursor-pointer">View</p>
+                            </div>
                         </div>
                     </div>
                     <hr />
                 </div>
             </div>
+            <div className='block lg:hidden'>
+                        <div>
+                            <p className="font-semibold text-lg text-center mt-2">Reports for last Month</p>
+                            <p className="text-base text-center">From 01 Jul - 21 Jul</p>
+                            <div className="flex justify-center items-center gap-8 text-sm my-4">
+                                <button className="text-white bg-blue-400 rounded px-4 py-2">Download PDF</button>
+                                <p className="text-blue-400 cursor-pointer">View</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div>
+                            <p className="font-semibold text-lg text-center mt-2">Defect Rate Report</p>
+                            <p className="text-base text-center">Product Defect & Supply Origin</p>
+                            <div className="flex justify-center items-center gap-8 text-sm my-8">
+                                <button className="text-white bg-purple-700 rounded px-4 py-2">Download PDF</button>
+                                <p className="text-purple-700 cursor-pointer">View</p>
+                            </div>
+                        </div>
+                    </div>
             <Footer />
         </div>
-    )
+    );
+
 }
 
 export default Reports
