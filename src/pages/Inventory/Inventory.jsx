@@ -17,6 +17,11 @@ import image6 from '../../assets/images/image6.jpg';
 import image7 from '../../assets/images/image7.png';
 import MobileSidebar from '../../components/Sidebar/MobileSidebar';
 
+import mac from '../../assets/mac_one.svg';
+import iphone from '../../assets/iphone1.svg';
+import key from '../../assets/key1.svg';
+import ody from '../../assets/ody.svg';
+
 const Inventory = () => {
 
   const images = [
@@ -73,6 +78,69 @@ const Inventory = () => {
               Add New Product
             </button>
           </div>
+
+          <div className='electrons flex flex-col gap-6 mx-8'>
+              <p className=" font-bold text-sm text-center block lg:hidden">Recent Activity</p>
+              <div className='grid grid-cols-2 lg:hidden gap-3'>
+                <div className='bg-white border p-2 rounded-md'>
+                  <h3 className='text-xs font-semibold'>Restocked <span className='text-[#04B4FC]'>6</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={mac} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#212529] font-bold'>Macbook pro</span>
+                    </div>
+                  </div>
+                </div>
+                <div className='bg-white border p-2 rounded-md'>
+                  <h3 className='text-xs font-semibold'>Sold <span className='text-[#04B4FC]'>2</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={iphone} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#212529] font-bold'>IPhone14 pro</span>
+                    </div>
+                  </div>
+                </div>
+                {/* <div>
+                  <h3 className='text-xs font-semibold'>Sold <span className='text-[#04B4FC]'>1</span>  Product</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={key} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Zoom75</span>
+                    </div>
+                  </div>
+                </div> */}
+                {/* <div>
+                  <h3 className='text-xs font-semibold'>Restocked <span className='text-[#04B4FC]'>12</span>  products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={key} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Zoom75</span>
+                    </div>
+                  </div>
+                </div> */}
+                {/* <div>
+                  <h3 className='text-xs font-semibold'>Sold <span className='text-[#04B4FC]'>3</span>  products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={ody} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Samsung Odyssey</span>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
+
+
+              {/* <div className="image-list space-y-8">
+                {images.map((image, index) => (
+                  <div key={index} className="flex items-center">
+                    <img src={image.src} alt={`image-${index + 1}`} className="w-5 h-5 rounded-full object-cover mr-4" />
+                    <span className="text-xs text-black">{image.description}</span>
+                  </div>
+                ))}
+              </div> */}
+            </div>
+            
+
           <div className='py-4 px-6 h-[730px] overflow-x-auto'>
             <p className='text-base mb-4 font-semibold'>Product List</p>
             <TableData />
@@ -121,16 +189,75 @@ const Inventory = () => {
               <p>ctrl + s</p>
             </div>
             <hr />
-            <div className='electrons flex flex-col gap-6 mx-14'>
-              <p className=" font-bold text-sm my-2 ">Fast Moving Items</p>
-              <div className="image-list space-y-8">
+            <div className='electrons flex flex-col gap-6 mx-8'>
+              <p className=" font-bold text-sm my-2 ">Recent Activity</p>
+              <div className='hidden lg:flex lg:flex-col space-y-6'>
+                <div>
+                  <h3 className='text-xs font-semibold'>Restocked <span className='text-[#04B4FC]'>6</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={mac} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Macbook pro</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>1 min ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Sold <span className='text-[#04B4FC]'>2</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={iphone} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>iphone14 pro</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>12 min ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Sold <span className='text-[#04B4FC]'>1</span>  Product</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={key} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Zoom75</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>23 min ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Restocked <span className='text-[#04B4FC]'>12</span>  products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={key} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Zoom75</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>42 min ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Sold <span className='text-[#04B4FC]'>3</span>  products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={ody} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Samsung Odyssey</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>2hr ago</p>
+                  </div>
+                </div>
+              </div>
+
+
+              {/* <div className="image-list space-y-8">
                 {images.map((image, index) => (
                   <div key={index} className="flex items-center">
                     <img src={image.src} alt={`image-${index + 1}`} className="w-5 h-5 rounded-full object-cover mr-4" />
                     <span className="text-xs text-black">{image.description}</span>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Logo from '../../assets/logo.svg';
 const Navbar = ({ title, showSearchBar }) => {  
 
   return (
-    <div className='w-full flex items-center justify-between px-2 py-2 md:px-10 md:py-4 bg-white border border-b-[#CED4DA] mx-auto'>
+    <div className='w-full flex items-center justify-between px-2 py-6 md:px-10 md:py-4 bg-white border border-b-[#CED4DA] mx-auto'>
       <div className=''>
         <img src={Logo} alt="BawanAllah" />
       </div>

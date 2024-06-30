@@ -28,7 +28,7 @@ const MobileSidebar = () => {
 
   return (
     <div>
-        <div className="lg:hidden absolute right-4 ml-4 -top-0">
+        <div className="lg:hidden absolute right-4 ml-4 -top-[-10px]">
         <BiMenuAltRight
           onClick={() => setmenubar(!menubar)}
           role="button"
