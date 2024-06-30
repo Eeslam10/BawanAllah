@@ -8,27 +8,16 @@ import Admin from '../../assets/images/admin.png';
 import { CiMenuKebab, CiExport, CiDeliveryTruck } from "react-icons/ci";
 import { BiMemoryCard } from "react-icons/bi";
 import { BsBox2 } from "react-icons/bs";
-import image1 from '../../assets/images/image1.jpg';
-import image2 from '../../assets/images/image2.jpg';
-import image3 from '../../assets/images/image3.jpg';
-import image4 from '../../assets/images/image4.jpg';
-import image5 from '../../assets/images/image5.jpg';
-import image6 from '../../assets/images/image6.jpg';
-import image7 from '../../assets/images/image7.png';
 import SalesData from '../../components/Sales/SalesData';
 import SalesChart from '../../components/Sales/SalesChart';
 import MobileSidebar from '../../components/Sidebar/MobileSidebar';
+import Alli from '../../assets/alli.svg';
+import Dom from '../../assets/dom.svg';
+import Grace from '../../assets/grace.svg';
+import Oman from '../../assets/oman.svg';
+import Vet from '../../assets/vet.svg';
 
 const SalesOrder = () => {
-  const images = [
-    { src: image1, description: 'Macbook Pro' },
-    { src: image2, description: 'iphone14 pro' },
-    { src: image3, description: 'Zoom75' },
-    { src: image4, description: 'Airpods Pro' },
-    { src: image5, description: 'Samsung Galaxy Fold' },
-    { src: image6, description: 'Samsumg Odyssey' },
-    { src: image7, description: 'Logitech Superlight' }
-  ];
 
   return (
     <div className='w-full'>
@@ -74,6 +63,29 @@ const SalesOrder = () => {
               Place Order
             </button>
           </div>
+          <div className='electrons flex flex-col gap-6 mx-8'>
+              <p className=" font-bold text-sm text-center block my-3 lg:hidden">Recent Activity</p>
+              <div className='grid grid-cols-2 lg:hidden gap-3 mb-4'>
+                <div className='bg-white border p-2 rounded-md'>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>11</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Grace} alt="macbook pro" />
+                      <span className='text-[0.6875rem] text-[#5C6F88] font-bold'>Grace Moreta</span>
+                    </div>
+                  </div>
+                </div>
+                <div className='bg-white border p-2 rounded-md'>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>11</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Alli} alt="macbook pro" />
+                      <span className='text-[0.6875rem] text-[#5C6F88] font-bold'>Allison Siphron</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           <div className='-mt-2 mb-3 overflow-x-auto'>
             <SalesData />
           </div>
@@ -126,15 +138,64 @@ const SalesOrder = () => {
               <p>ctrl + s</p>
             </div>
             <hr />
-            <div className='electrons flex flex-col gap-6 mx-14'>
-              <p className=" font-bold text-sm my-2 ">Fast Moving Items</p>
-              <div className="image-list space-y-8">
-                {images.map((image, index) => (
-                  <div key={index} className="flex items-center">
-                    <img src={image.src} alt={`image-${index + 1}`} className="w-5 h-5 rounded-full object-cover mr-4" />
-                    <span className="text-xs text-black">{image.description}</span>
+            <div className='electrons flex flex-col gap-6 mx-10'>
+              <p className=" font-bold text-sm my-2 ">Recent Activity</p>
+              <div className='hidden lg:flex lg:flex-col space-y-6'>
+                <div>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>11</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Grace} alt="Grace" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Grace Moreta</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>1 min ago</p>
                   </div>
-                ))}
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>24</span>  Products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Alli} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Allison Siphron</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>12m ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>4</span>  Product</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Dom} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Makenna Doman</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>23m ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>24</span>  products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Oman} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Makenna Doman</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>42m ago</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-xs font-semibold'>Ordered <span className='text-[#04B4FC]'>16</span>  products</h3>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2 mt-3'>
+                      <img src={Vet} alt="macbook pro" />
+                      <span className='text-[0.625rem] text-[#5C6F88] font-normal'>Ahmad Vetrovs</span>
+                    </div>
+                    <div className='text-[0.625rem] text-[#5C6F88] font-normal'>-</div>
+                    <p className='text-[0.625rem] text-[#5C6F88] font-normal'>2h ago</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
