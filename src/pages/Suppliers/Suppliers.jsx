@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import Footer from '../../components/Footer/Footer'
+import MobileSidebar from '../../components/Sidebar/MobileSidebar'
 import Chart from 'react-apexcharts';
 import { useTable } from 'react-table';
 import { FaApple, FaMicrosoft, FaGoogle, FaAmazon, FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaSnapchat, FaYoutube } from 'react-icons/fa';
@@ -28,7 +29,7 @@ const options = {
     }
   }],
   dataLabels: {
-    enabled: true,
+    enabled: false,
     style: {
       colors: ['#000']
     },
@@ -158,13 +159,14 @@ const Suppliers = () => {
   return (
     <div className='w-full '>
       <Navbar />
+      <MobileSidebar />
       <div className='flex'>
         <Sidebar />
-        <div className="w-3/5 border border-r-[#CED4DA]">
+        <div className="w-full lg:w-3/5 lg:border lg:border-r-[#CED4DA]">
           <div className='flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border border-b-[#CED4DA]'>
             <p className='text-base font-bold'>Suppliers</p>
             <div className='w-60'>
-              <form className='flex items-center'>
+              <form className='hidden lg:flex items-center'>
                 <label htmlFor='simple-search' class='sr-only'>
                   Search
                 </label>
@@ -193,12 +195,36 @@ const Suppliers = () => {
                 </div>
               </form>
             </div>
-            <button className='flex items-center gap-2  text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm'>
+            <button className='flex items-center gap-2  text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm whitespace-nowrap'>
             <AiOutlinePlusCircle size={25} />
               Edit Suppliers
               </button>
           </div>
-          <div className='py-4 px-6'>
+
+          <div className='block lg:hidden'>
+              <p className='mx-14 font-semibold mt-4'>Top Suppliers</p>
+              <div className="flex flex-row lg:flex-col justify-start items-center ">
+                <div className="mixed-chart lg:mb-4">
+                  <Chart
+                    options={options}
+                    series={series}
+                    type="pie"
+                    width="335"
+                  />
+                </div>
+                <div className=" font-normal lg:mr-28 ">
+                  <ul>
+                    {options.labels.map((label, index) => (
+                      <li key={index} className="text-sm leading-8 " style={{ color: options.colors[index] }}>
+                      {label} {percentages[index]}%
+                    </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          <div className='py-4 px-6 overflow-x-auto'>
             <table {...getTableProps()} className="min-w-full ">
               <thead className="" >
                 {headerGroups.map(headerGroup => (
@@ -206,7 +232,7 @@ const Suppliers = () => {
                     {headerGroup.headers.map(column => (
                       <th
                         {...column.getHeaderProps()}
-                        className="px-6 py-3 text-left text-xs font-semibold  text-black-500 uppercase tracking-wider"
+                        className="px-6 py-3 text-left text-xs font-semibold  text-black-500 uppercase tracking-wider whitespace-nowrap"
                       >
                         {column.render('Header')}
                       </th>
@@ -235,7 +261,7 @@ const Suppliers = () => {
           </div>
         </div>
 
-        <div className='admin bg-white w-3/12'>
+        <div className='admin hidden lg:block bg-white w-3/12'>
           <div className='flex justify-around items-center mt-4'>
             <div className='flex gap-2'>
               <img src={Admin} className='w-9 h-9 rounded-full' />
@@ -277,28 +303,28 @@ const Suppliers = () => {
               <p>ctrl + s</p>
             </div>
             <hr />
-
-            <p className='mx-14 font-semibold mt-4'>Top Suppliers</p>
-            <div className="flex justify-start items-center flex-col">
-              <div className="mixed-chart mb-4">
-                <Chart
-                  options={options}
-                  series={series}
-                  type="pie"
-                  width="335"
-                />
-              </div>
-              <div className="font-normal mr-28 ">
-                <ul>
-                  {options.labels.map((label, index) => (
-                     <li key={index} className="text-sm leading-8 " style={{ color: options.colors[index] }}>
-                     {label} {percentages[index]}%
-                   </li>
-                  ))}
-                </ul>
+            <div>
+              <p className='mx-14 font-semibold mt-4'>Top Suppliers</p>
+              <div className="flex justify-start items-center flex-col">
+                <div className="mixed-chart mb-4">
+                  <Chart
+                    options={options}
+                    series={series}
+                    type="pie"
+                    width="335"
+                  />
+                </div>
+                <div className="font-normal mr-28 ">
+                  <ul>
+                    {options.labels.map((label, index) => (
+                      <li key={index} className="text-sm leading-8 " style={{ color: options.colors[index] }}>
+                      {label} {percentages[index]}%
+                    </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>

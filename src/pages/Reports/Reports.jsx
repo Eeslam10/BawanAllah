@@ -155,7 +155,7 @@ const Reports = () => {
             }
         }],
         dataLabels: {
-            enabled: true,
+            enabled: false,
             style: {
                 colors: ['#000']
             },
@@ -181,49 +181,17 @@ const Reports = () => {
                 <div className="w-full lg:w-3/5 border border-r-[#CED4DA]">
                     <div className="flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border border-b-[#CED4DA]">
                         <p className="text-base font-bold">Reports</p>
-                        <div className="w-60">
-                            {/* <form className="flex items-center hidden lg:block">
-                                <label htmlFor="simple-search" className="sr-only">
-                                    Search
-                                </label>
-                                <div className="relative w-full">
-                                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="w-4 h-4 text-gray-500"
-                                            fill="currentColor"
-                                            viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                                clipRule="evenodd"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                    <input
-                                        type="text"
-                                        className="bg-white border border-[#CED4DA] text-black text-sm rounded-xl block w-full pl-10 p-2.5 outline-none"
-                                        placeholder="Search"
-                                        required
-                                    />
-                                </div>
-                            </form> */}
-                        </div>
                         <button className="lflex gap-2 text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-md flex items-center w-full sm:w-auto">
                             <SlPrinter size={25} />
                             Print Reports
                         </button>
                     </div>
-                    <div className='block lg:hidden flex mb-4'>
-
-                        <div className="flex justify-start items-center flex-col flex-row ">
-                            <p className="text-center font-semibold mt-0">Top Suppliers</p>
+                    <div className=' lg:hidden block mb-4'>
+                        <p className="text-base text-center font-semibold mt-0">Top Suppliers</p>
+                        <div className="flex justify-start items-center flex-row lg:flex-col">
                             <Chart options={chartConfige} series={performanceData} type="pie" width="400" />
-                        </div>
-                        <div className="font-normal ">
-                            <ul className='flex flex-wrap mt-8'>
+                           <div className="font-normal ">
+                            <ul className='flex flex-wrap lg:mt-8'>
                                 {chartConfige.labels.map((label, index) => (
                                     <li key={index} className="text-sm leading-8" style={{ color: chartConfige.colors[index] }}>
                                         {label} - {percentages[index]}%
@@ -231,6 +199,7 @@ const Reports = () => {
                                 ))}
                             </ul>
                             <hr />
+                        </div>
                         </div>
                     </div>
                     <div className="px-6 flex justify-between items-center">
@@ -266,7 +235,7 @@ const Reports = () => {
                 </div>
                 
                 <div className="w-3/12 bg-white">
-                    <div className="flex justify-around mt-4 mb-6 hidden lg:block">
+                    <div className="lg:flex justify-around mt-4 mb-6 hidden">
                         <div className='flex justify-around'>
 
                         <div className="flex gap-2  ">
@@ -285,7 +254,7 @@ const Reports = () => {
 
                     <div className='hidden lg:block'>
 
-                        <div className="flex justify-start items-center flex-col flex-row ">
+                        <div className="flex justify-start items-center flex-col">
                             <p className="text-center font-semibold mt-4">Top Suppliers</p>
                             <Chart options={chartConfige} series={performanceData} type="pie" width="320" />
                         </div>

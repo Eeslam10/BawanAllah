@@ -112,7 +112,7 @@ const Dashboard = () => {
           </div>
 
 
-          <div className='charts bg-white mt-4 flex flex-col justify-center rounded-md'>
+          <div className='charts bg-white mt-4 flex flex-col justify-center rounded-md overflow-x-auto'>
             <p className='font-bold text-sm mx-4 mt-4'>Stock Report</p>
             <Chart
               options={state.options}
@@ -128,7 +128,7 @@ const Dashboard = () => {
                 <p className=" font-bold text-sm mx-4 ">Sales Order</p>
                 <p className=" font-bold text-sm mx-4 ">last 7 days</p>
               </div>
-              <div className="pb-16 border-b-4 border-white">
+              <div className="pb-16 border-b-4 border-white overflow-x-auto">
                 <table className="min-w-full bg-white p-4 ">
 
                   <tbody className='text-xs'>
