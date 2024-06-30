@@ -8,9 +8,9 @@ const Navbar = ({ title, showSearchBar }) => {
       <div className=''>
         <img src={Logo} alt="BawanAllah" />
       </div>
-      <div className='w-60'>
+      <div className='w-60 mr-7 lg:mr-5'>
         {showSearchBar && (
-          <form className='flex items-center'>
+          <form className='hidden lg:flex items-center'>
             <label htmlFor='simple-search' class='sr-only'>
               Search
             </label>

@@ -41,6 +41,9 @@ const Dashboard = () => {
       chart: {
         stacked: true,
         id: "bar",
+        toolbar: {
+          show: false, 
+        },
       },
       xaxis: {
         categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -49,6 +52,10 @@ const Dashboard = () => {
         bar: {
             // Set the border radius to make the top rounded
         },
+      },
+      legend: {
+        position: 'top',
+        horizontalAlign: 'right',
       },
       colors: ['#87CEEB', '#9933FF']
     },
@@ -71,9 +78,9 @@ const Dashboard = () => {
       <MobileSidebar />
       <div className='flex'>
         <Sidebar />
-        <div className='w-3/5 pt-4 border-r-2 border-b-2 bg-[#F4F5FC]'>
-          <h3 className='m-1 ml-10 font-bold'>Sales Summary</h3>
-          <div className='flex gap-4 ml-10'>
+        <div className='w-full lg:w-3/5 pt-4 lg:border-r-2 border-b-2 bg-[#F4F5FC]'>
+          <h3 className='m-1 ml-5 lg:ml-10 font-bold'>Sales Summary</h3>
+          <div className='w-full grid grid-cols-2 lg:grid-cols-4 gap-4 lg:ml-10'>
             <div className='flex items-center  bg-white w-48 p-3 rounded-md cursor-pointer'>
               <AiOutlineLineChart size={30} color='blue' className='bg-cyan-300 rounded-full p-1.5 mr-2' />
               <div className='text-xs'	>
@@ -112,6 +119,7 @@ const Dashboard = () => {
               series={state.series}
               type="bar"
               width="800"
+              className='w-[300px] lg:w-full'
               height={300}
             />
             <hr />
@@ -163,7 +171,7 @@ const Dashboard = () => {
           </div>
 
         </div>
-        <div className='admin bg-white w-3/12 border-b-2'>
+        <div className='admin hidden lg:block bg-white w-3/12 border-b-2'>
           <div className='flex justify-around items-center mt-4'>
             <div className='flex gap-2'>
               <img src={Admin} className='w-9 h-9 rounded-full' />
