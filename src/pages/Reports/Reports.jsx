@@ -234,7 +234,7 @@ const Reports = () => {
                         <p>(Top 5 Suppliers)</p>
                     </div>
                     <hr />
-                    <div className="flex justify-center">
+                    <div className="horizontal flex justify-center">
                         <div className="bg-white p-4" style={{ width: '600px' }}>
                             <Chart options={chartConfig} series={chartConfig.series} type="bar" height={220} />
                         </div>
