@@ -55,7 +55,7 @@ const Inventory = () => {
             </div>
               </form> 
             </div> 
-            <button className='flex items-center gap-2 text-white bg-[#04B4FC] py-2 px-2 text-sm font-semibold rounded-md'>
+            <button className='flex items-center gap-2 text-white bg-[#04B4FC] py-2 px-2 text-xs lg:text-sm font-semibold rounded-md'>
             <AiOutlinePlusCircle size={25} />
               Add New Product
             </button>
@@ -64,7 +64,7 @@ const Inventory = () => {
               <p className=" font-bold text-sm text-center block lg:hidden">Recent Activity</p>
               <div className='grid grid-cols-2 lg:hidden gap-3'>
                 <div className='bg-white border p-2 rounded-md'>
-                  <h3 className='text-xs font-semibold'>Restocked <span className='text-[#04B4FC]'>6</span>  Products</h3>
+                  <h3 className='text-xs font-semibold whitespace-nowrap'>Restocked <span className='text-[#04B4FC]'>6</span>  Products</h3>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-2 mt-3'>
                       <img src={mac} alt="macbook pro" />

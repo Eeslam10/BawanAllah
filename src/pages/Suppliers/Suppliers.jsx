@@ -195,7 +195,7 @@ const Suppliers = () => {
                 </div>
               </form>
             </div>
-            <button className='flex items-center gap-2  text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-sm whitespace-nowrap'>
+            <button className='flex items-center gap-2  text-white bg-[#04B4FC] py-2 px-4 text-xs lg:text-sm font-semibold rounded-sm whitespace-nowrap'>
             <AiOutlinePlusCircle size={25} />
               Edit Suppliers
               </button>
