@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Foot/Foot'
 import Admin from '../../assets/images/admin.png';
 import { CiMenuKebab } from "react-icons/ci";
 import Chart from 'react-apexcharts';
