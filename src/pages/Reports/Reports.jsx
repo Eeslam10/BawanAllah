@@ -187,7 +187,7 @@ const Reports = () => {
                         </button>
                     </div>
                     <div className=' lg:hidden block mb-4'>
-                        <p className="text-base text-center font-semibold mt-0">Top Suppliers</p>
+                        <p className="text-base ml-6 font-semibold mt-0">Top Suppliers</p>
                         <div className="flex justify-start items-center flex-row lg:flex-col">
                             <Chart options={chartConfige} series={performanceData} type="pie" width="400" />
                            <div className="font-normal ">
