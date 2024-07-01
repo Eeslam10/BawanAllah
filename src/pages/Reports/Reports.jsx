@@ -181,7 +181,7 @@ const Reports = () => {
                 <div className="w-full lg:w-3/5 border border-r-[#CED4DA]">
                     <div className="flex items-center justify-between bg-[#F4F6FC] py-4 px-6 mb-5 border border-b-[#CED4DA]">
                         <p className="text-base font-bold">Reports</p>
-                        <button className="lflex gap-2 text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-md flex items-center w-full sm:w-auto">
+                        <button className="lflex gap-2 text-white bg-[#04B4FC] py-2 px-4 text-sm font-semibold rounded-md flex items-center w">
                             <SlPrinter size={25} />
                             Print Reports
                         </button>
